@@ -1,0 +1,327 @@
+/* 全局樣式重置, 清除預設的 padding 和 margin */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+/* 頁面背景設定 */
+body {
+   background-color: #f4f2ed; /* 柔和米色背景 */
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+   color: #3e3b32; /* 大地色文字 */
+}
+
+
+/* 固定底部導航列的樣式 */
+.home { 
+   display: flex;
+   justify-content: space-around; /* 平均分配空間 */
+   list-style-type: none;
+   margin: 0;
+   padding: 10px 0;
+   background-color: #f8f9fa; /* 導航列背景色 */
+   width: 100%;
+   text-align: center;
+   border-top: 1px solid #ddd;
+}
+.square-card {
+   aspect-ratio: 1 / 1; /* 使卡片寬高相等，呈現正方形 */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 15px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 柔和陰影 */
+   transition: transform 0.2s ease;
+}
+
+.square-card:hover {
+   transform: scale(1.05); /* 卡片放大效果 */
+}
+
+/* 卡片中的文字樣式 */
+.text-card h4 a {
+   color: #020406; /* iOS 藍色 */
+   font-weight: bold;
+}
+
+.text-card h4 a:hover {
+   color: #10171f;
+}
+
+a.text-decoration-none {
+   text-decoration: none;
+   color: inherit; /* 保持文字顏色 */
+}
+
+a.text-decoration-none:hover h4 {
+   color: #0f1821; /* 滑鼠懸停效果 */
+}
+
+/* 底部導航樣式 */
+.home {
+   display: flex;
+   justify-content: space-around;
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+.home-item {
+   flex: 1;
+   text-align: center;
+}
+
+.home-link {
+   color: #101922;
+   text-decoration: none;
+   padding: 10px 0;
+}
+
+.home-link:hover {
+   color: #121e2a;
+}
+.home-item {
+   flex: 1; /* 每個項目佔據同等寬度 */
+}
+
+.home-link {
+   display: block;
+   color: #111920;
+   text-decoration: none;
+   padding: 10px 0;
+}
+
+.home-link:hover {
+   color: #0f1821; /* 滑鼠懸停顏色 */
+}
+/* 留言區塊容器樣式 */
+.message1 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+}
+
+/* 留言板主容器樣式 */
+.message-board {
+   width: 100%;
+   max-width: 600px;
+   border-radius: 12px;
+   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* 柔和陰影 */
+   background-color: #ffffff; /* 白色背景 */
+   padding: 15px;
+}
+
+/* 頁面標題樣式 */
+h1 {
+   color: #3b3b3b;
+   position: fixed;
+   left: 50%;
+   transform: translateX(-50%);
+   margin: 0;
+   padding: 10px 20px;
+   z-index: 1000;
+   background-color: rgba(229, 207, 188, 0.85); /* 淡綠色背景 */
+   color: #0b0808;
+   border-radius: 12px;
+   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 搜索區塊容器樣式 */
+.search {
+   padding: 170px 0 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* 搜索區塊中的按鈕樣式 */
+.search button {
+   padding: 8px 12px;
+   margin-left: 5px;
+   background-color: #3a4a7e; /* 深綠色 */
+   color: white;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+   transition: background-color 0.3s;
+}
+
+.search button:hover {
+   background-color: #213658; /* 更深的綠色 */
+}
+
+/* 搜索區塊中的輸入框樣式 */
+.search input {
+   padding: 8px;
+   width: 250px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   font-size: 16px;
+}
+
+/* 留言卡片容器的 hover 效果 */
+.message-card {
+   transition: transform 0.2s;
+}
+
+.message-card:hover {
+   transform: translateY(-2px);
+}
+
+/* 小螢幕設備的容器樣式 */
+@media (max-width: 768px) {
+   .container {
+       padding: 0 15px;
+   }
+   .section-title {
+      padding-top: 70px;
+      font-size: 1.5rem;
+  }
+
+
+}
+      /* 卡片樣式，正方形且移除文字底線 */
+      .gym-card {
+         aspect-ratio: 1 / 1; /* 設置為正方形 */
+         border-radius: 10px;
+         overflow: hidden;
+         transition: transform 0.2s;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
+         text-decoration: none;
+         color: inherit;
+     }
+     
+     .gym-card:hover {
+         transform: scale(1.05); /* 懸停時放大效果 */
+     }
+
+     /* 卡片內部文字居中對齊 */
+     .gym-card .card-body {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         padding: 15px;
+         text-align: center;
+     }
+
+     /* 移除文字底線 */
+     .gym-card h4, .gym-card p {
+         margin: 0;
+         text-decoration: none;
+     }
+
+     .gym-card h4 {
+         font-size: 1.1em;
+         color: #06090c;
+         font-weight: bold;
+     }
+
+     .gym-card h4:hover {
+         color: #090d11;
+     }
+
+/* 章節標題樣式 */
+.section-title {
+   padding-top: 55px;
+   font-size: 1.5rem;
+   color: #3e3b32;
+}
+
+
+
+
+
+/* iOS風格的陰影效果 */
+.level-image {
+   width: 100%;
+   max-width: 800px;
+   height: auto;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   margin: 0 auto;
+   display: block;
+}
+
+
+/* Modal 樣式 */
+.image-modal {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.9);
+   z-index: 2000;
+   opacity: 0;
+   transition: opacity 0.3s ease;
+}
+
+.image-modal.show {
+   display: flex;
+   opacity: 1;
+}
+
+.modal-content-wrapper {
+   position: relative;
+   width: 90%;
+   max-width: 1200px;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.modal-image {
+   max-width: 100%;
+   max-height: 90vh;
+   object-fit: contain;
+}
+
+.close-button {
+   position: absolute;
+   top: -40px;
+   right: 0;
+   color: white;
+   font-size: 30px;
+   cursor: pointer;
+   background: none;
+   border: none;
+   padding: 5px;
+   opacity: 0.8;
+   transition: opacity 0.3s ease;
+}
+
+.close-button:hover {
+   opacity: 1;
+}
+
+/* 放大圖示 */
+.image-container {
+   position: relative;
+   display: inline-block;
+}
+
+.zoom-hint {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   background-color: rgba(0, 0, 0, 0.6);
+   color: white;
+   padding: 5px 10px;
+   border-radius: 4px;
+   font-size: 14px;
+   pointer-events: none;
+   opacity: 0;
+   transition: opacity 0.3s ease;
+}
+
+.image-container:hover .zoom-hint {
+   opacity: 1;
+}
+

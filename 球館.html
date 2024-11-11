@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+        <!-- 頭部開始 -->
+        <meta charset="UTF-8"/>
+        <!-- 設置網頁的編碼為 UTF-8 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 設定 viewport 使網頁能適應各種裝置的螢幕寬度 -->
+        <title>撲得了球卻撲不進妳心裡</title>
+         <!-- 引入自訂 JavaScript 文件 -->
+        <script src="script.js"></script>   
+        <!-- 引入外部 CSS 文件 -->
+        <link rel="stylesheet" href="style.css">
+        <!-- 引入 Bootstrap 框架的 CSS 文件 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <!-- 引入 Bootstrap 的 JavaScript 文件 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>  
+</head>
+<body>
+    <!-- 底部導航 -->
+    <ul class="home fixed-bottom d-flex justify-content-around bg-light py-2 border-top">
+        <li class="home-item"><a class="home-link" href="index.html">Home</a></li>
+    </ul>
+
+    <div class="container my-5">
+        <h3>請選擇地區：</h3>
+        <select id="suitable" class="form-select" required onchange="displayContent()">
+            <option value="" disabled selected>請選擇地區</option>
+            <option value="新北/台北">新北/台北</option>
+            <option value="桃園">桃園</option>
+            <option value="新竹">新竹</option>
+            <option value="台中">台中</option>
+        </select>
+
+        <!-- 相對應內容區塊 -->
+        <div id="content" class="mt-4">
+            <div id="newTaipei" class="content-area" style="display: none;">
+                <h4>新北/台北的排球館</h4>
+                <div class="row row-cols-2 g-3 mt-4">
+                    <!-- 藍鵲排球館 -->
+                    <div class="col">
+                        <a href="https://maps.app.goo.gl/cVoHvA5Skq7nqW7v5" class="gym-card">
+                            <div class="card">
+                                <img src="images/兔兔.jpg" alt="藍鵲排球館" class="card-img-top">
+                                <div class="card-body">
+                                    <h4>藍鵲排球館</h4>
+                                    <p>235新北市中和區圓通路439-2號</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- 612排球星球+ -->
+                    <div class="col">
+                        <a href="https://maps.app.goo.gl/dSruLPHfobdzdBeJA" class="gym-card">
+                            <div class="card">
+                                <img src="images/兔兔.jpg" alt="612排球星球+" class="card-img-top">
+                                <div class="card-body">
+                                    <h4>612排球星球+</h4>
+                                    <p>236新北市土城區廣福街77巷6-18號</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <!-- 65volleyball -->
+                    <div class="col">
+                        <a href="https://maps.app.goo.gl/sXYhqNWCeGBKRkMH7" class="gym-card">
+                            <div class="card">
+                                <img src="images/兔兔.jpg" alt="65volleyball" class="card-img-top">
+                                <div class="card-body">
+                                    <h4>65volleyball</h4>
+                                    <p>220新北市板橋區大觀路二段19巷128號</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <!-- NVA Club House 排球俱樂部 -->
+                    <div class="col">
+                        <a href="https://maps.app.goo.gl/TL3xzkEQH8NCtgw9" class="gym-card">
+                            <div class="card">
+                                <img src="images/兔兔.jpg" alt="NVA Club House 排球俱樂部" class="card-img-top">
+                                <div class="card-body">
+                                    <h4>NVA Club House 排球俱樂部</h4>
+                                    <p>236新北市土城區忠義路55巷55-8號</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <!-- 3.14π球館 -->
+                    <div class="col">
+                        <a href="https://maps.app.goo.gl/atrATKS2Cmte5oZu9" class="gym-card">
+                            <div class="card">
+                                <img src="images/兔兔.jpg" alt="3.14π球館" class="card-img-top">
+                                <div class="card-body">
+                                    <h4>3.14π球館</h4>
+                                    <p>241新北市三重區光復路二段17巷22之1號</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <!-- WOOHA SPORTS CLUB -->
+                    <div class="col">
+                        <a href="https://maps.app.goo.gl/UjSPwmF1Ptwy6uJa6" class="gym-card">
+                            <div class="card">
+                                <img src="images/兔兔.jpg" alt="WOOHA SPORTS CLUB" class="card-img-top">
+                                <div class="card-body">
+                                    <h4>WOOHA SPORTS CLUB</h4>
+                                    <p>238新北市樹林區八德街353號</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <!-- 林口Ace排球館 -->
+                    <div class="col">
+                        <a href="https://maps.app.goo.gl/NXX751Hb8cUhXwjY6" class="gym-card">
+                            <div class="card">
+                                <img src="images/兔兔.jpg" alt="林口Ace排球館" class="card-img-top">
+                                <div class="card-body">
+                                    <h4>林口Ace排球館</h4>
+                                    <p>244新北市林口區民生路102-3號</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
