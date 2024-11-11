@@ -116,9 +116,7 @@ a.text-decoration-none:hover h4 {
 /* 頁面標題樣式 */
 h1 {
    color: #3b3b3b;
-   position: fixed;
-   left: 50%;
-   transform: translateX(-50%);
+   text-align:center;
    margin: 0;
    padding: 10px 20px;
    z-index: 1000;
