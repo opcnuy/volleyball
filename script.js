@@ -169,22 +169,22 @@ document.addEventListener('keydown', function(event) {
         closeModal();
     }
 });
-
-
-
 // 根據選擇顯示對應地區的排球館內容
 function displayContent() {
     // 隱藏所有地區內容區塊
     document.querySelectorAll('.content-area').forEach(function(area) {
         area.style.display = 'none';
     });
-
     // 獲取選中的地區
     const selectedValue = document.getElementById("suitable").value;
-
     // 顯示選中地區的內容
     if (selectedValue === "新北/台北") {
         document.getElementById("newTaipei").style.display = 'block';
+    } else if (selectedValue === "桃園") {
+        document.getElementById("taoyuan").style.display = 'block';
+    } else if (selectedValue === "新竹") {
+        document.getElementById("hsinchu").style.display = 'block';
+    } else if (selectedValue === "台中") {
+        document.getElementById("taichung").style.display = 'block';
     }
-    // 可以繼續添加其他地區的顯示條件
 }
