@@ -35,6 +35,11 @@ function loadMessages() {
     renderMessages();
     // 調用 renderMessages 函數，渲染當前頁面的留言
 }
+ // 開啟留言彈窗
+    function openMessageModal() {
+        var myModal = new bootstrap.Modal(document.getElementById('messageModal'));
+        myModal.show();
+    }
 
 // 渲染當前頁的留言
 function renderMessages() {
@@ -91,7 +96,7 @@ function filterMessages() {
             return (
                 location.toLowerCase().includes(searchTerm) ||
                 message.toLowerCase().includes(searchTerm) ||
-                suitable.toLowerCase().includes(searchTerm) // 將「是否適合打球」欄位納入搜尋範圍
+                suitable.toLowerCase().includes(searchTerm) 
             );
         })
         .sort((a, b) => b.timestamp - a.timestamp);
