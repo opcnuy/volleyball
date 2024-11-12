@@ -24,15 +24,43 @@
 </header>
 <body>
     <!-- 主體內容開始 -->
-    <ul class="home fixed-bottom d-flex justify-content-around bg-light py-2 border-top">
-        <li class="home-item"><a class="home-link" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 15 21">
-            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
-            <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
-          </svg></a></li>
-    </ul>
+    
     <!-- 主內容區域 -->
-     
     <main class="container mt-1">
+        <!-- 留言彈窗 -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="messageModalLabel">我要留言</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="messageForm">
+              <div class="mb-3">
+                  <label for="location" class="form-label">地點</label>
+                  <input type="text" class="form-control" id="location" placeholder="輸入地點" required>
+              </div>
+              <div class="mb-3">
+                  <label for="message" class="form-label">留言</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="輸入你的留言" required></textarea>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label">是否適合打球？</label>
+                  <select id="suitable" class="form-select" required>
+                      <option value="" disabled selected>請選擇</option>
+                      <option value="打到死">打到死</option>
+                      <option value="在家睡">在家睡</option>
+                      <option value="有人">有人</option>
+                      <option value="沒人">沒人</option>
+                  </select>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">提交留言</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
         <!-- 使用 Bootstrap 容器設定和上邊距 -->
         <div class="message-board">
             <div class="search-bar mb-3">
@@ -40,7 +68,7 @@
                 <input type="text" id="searchInput" class="form-control" placeholder="搜尋關鍵字" oninput="filterMessages()">
                 <!-- 搜尋輸入框，當用戶輸入時觸發 filterMessages() 函式 -->
             </div>
-
+            <button class="btn btn-primary w-50 mt-2" onclick="openMessageModal()">我要留言</button>
             <!-- 留言顯示和分頁 -->
             <div id="messageContainer" class="mt-4">
                 <!-- 留言顯示區域，設置上方 margin -->
@@ -55,43 +83,19 @@
                     <button class="btn btn-secondary" onclick="nextPage()" id="nextButton" disabled>下一頁</button>
                     <!-- 下一頁按鈕，預設為禁用 -->
                 </div>
-            </div>
-            <!-- 留言板區域 -->
-            <form id="messageForm" class="mb-3">
-                <!-- 留言表單，設置下方 margin -->
-                <div class="mb-3">
-                    <label for="location" class="form-label">地點</label>
-                    <!-- 地點輸入框標籤 -->
-                    <input type="text" class="form-control" id="location" placeholder="輸入地點" required>
-                    <!-- 地點輸入框，設置為必填 -->
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">留言</label>
-                    <!-- 留言內容輸入框標籤 -->
-                    <textarea class="form-control" id="message" rows="3" placeholder="輸入你的留言" required></textarea>
-                    <!-- 留言內容輸入框，設置為必填 -->
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">是否適合打球？</label>
-                    <!-- 是否適合打球的選擇框標籤 -->
-                    <select id="suitable" class="form-select" required>
-                        <!-- 下拉選單 -->
-                        <option value="" disabled selected>請選擇</option>
-                        <!-- 預設選項 -->
-                        <option value="打到死">打到死</option>
-                        <option value="在家睡">在家睡</option>
-                        <option value="有人">有人</option>
-                        <option value="沒人">沒人</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">提交留言</button>
-                <!-- 表單提交按鈕，使用 Bootstrap 的樣式設定為藍色按鈕，並佔滿寬度 -->
-            </form>
-
-           
+            </div>    
         </div>
     </main>
     <!-- 引入自訂 JavaScript 文件 -->
     <script src="script.js"></script>   
 </body>
+
+<footer style="padding: 35px;">
+    <ul class="home fixed-bottom d-flex justify-content-around bg-light py-1 border-top">
+    <li class="home-item"><a class="home-link" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 15 21">
+        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+        <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+      </svg></a></li>
+    </ul>
+</footer>
 </html>
