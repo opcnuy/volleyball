@@ -20,6 +20,10 @@ function openMessageModal() {
     myModal.show();
 }
 
+function resetForm() {
+    document.getElementById('messageForm').reset();
+}
+
 // 渲染當前頁的留言
 function renderMessages() {
     messagesList.innerHTML = '';
