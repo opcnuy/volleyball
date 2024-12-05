@@ -23,8 +23,6 @@
       </svg></h1>
 </header>
 <body>
-    <!-- 主體內容開始 -->
-    
     <!-- 主內容區域 -->
     <main class="container mt-1">
         <!-- 留言彈窗 -->
@@ -68,15 +66,16 @@
         <!-- 使用 Bootstrap 容器設定和上邊距 -->
         <div class="message-board">
             <div class="search-bar mb-3">
+                <h3>搜尋</h3>
                 <!-- 搜尋欄位，設置下方 margin -->
-                <input type="text" id="searchInput" class="form-control" placeholder="搜尋關鍵字" oninput="filterMessages()">
+                <input type="text" id="searchInput" class="form-control" placeholder="地點、留言和其他內容" oninput="filterMessages()">
                 <!-- 搜尋輸入框，當用戶輸入時觸發 filterMessages() 函式 -->
             </div>
-            <button class="btn btn-primary w-50 mt-2" onclick="openMessageModal()">我要留言</button>
+            
             <!-- 留言顯示和分頁 -->
             <div id="messageContainer" class="mt-4">
                 <!-- 留言顯示區域，設置上方 margin -->
-                <h3 class="text-center">留言內容</h3>
+                <h3>留言內容</h3>
                 <!-- 留言區域標題，置中顯示 -->
                 <ul class="list-group" id="messagesList"></ul>
                 <!-- 留言列表，使用 Bootstrap 的 list-group 樣式 -->
@@ -95,11 +94,20 @@
 </body>
 
 <footer style="padding: 35px;">
-    <ul class="home fixed-bottom d-flex justify-content-around bg-light py-1 border-top">
-    <li class="home-item"><a class="home-link" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 15 21">
-        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
-        <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
-      </svg></a></li>
+    <ul class="home fixed-bottom d-flex align-items-center justify-content-between bg-light py-1 border-top">
+    <li class="home-item">
+        <a class="home-link" href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 15 21">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+            </svg>
+        </a>
+    </li>
+    <li class="home-divider d-flex justify-content-center">
+        <div style="width: 1px; height: 40px; background-color: gray;"></div>
+    <li class="home-item ">
+        <button style="border: none;background: none;"onclick="openMessageModal()">我要留言</button>
+    </li>
     </ul>
 </footer>
 </html>
