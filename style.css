@@ -13,18 +13,7 @@ body {
 }
 
 
-/* 固定底部導航列的樣式 */
-.home { 
-   display: flex;
-   justify-content: space-around; /* 平均分配空間 */
-   list-style-type: none;
-   margin: 0;
-   padding: 10px 0;
-   background-color: #f8f9fa; /* 導航列背景色 */
-   width: 100%;
-   text-align: center;
-   border-top: 1px solid #ddd;
-}
+
 .square-card {
    aspect-ratio: 1 / 1; /* 使卡片寬高相等，呈現正方形 */
    display: flex;
@@ -108,33 +97,14 @@ h1 {
    left: 50%;
    margin: 0;
    padding: 10px 20px;
-   background-color: rgba(229, 207, 188, 0.85); /* 淡綠色背景 */
+   background-color: rgba(188, 229, 215, 0.85);
    color: #0b0808;
    border-radius: 12px;
    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 
-/* 搜索區塊容器樣式 */
-.search {
-   padding: 170px 0 100px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
 
-/* 搜索區塊中的按鈕樣式 */
-.search button {
-   padding: 8px 12px;
-   margin-left: 5px;
-   background-color: #3a4a7e; /* 深綠色 */
-   color: white;
-   border: none;
-   border-radius: 8px;
-   cursor: pointer;
-   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-   transition: background-color 0.3s;
-}
 
 .search button:hover {
    background-color: #213658; 
@@ -147,15 +117,6 @@ h1 {
    border: 1px solid #ccc;
    border-radius: 8px;
    font-size: 16px;
-}
-
-/* 留言卡片容器的 hover 效果 */
-.message-card {
-   transition: transform 0.2s;
-}
-
-.message-card:hover {
-   transform: translateY(-2px);
 }
 
 /* 小螢幕設備的容器樣式 */
