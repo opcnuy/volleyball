@@ -30,12 +30,12 @@ body {
 
 /* 卡片中的文字樣式 */
 .text-card h4 a {
-   color: #020406; /* iOS 藍色 */
+   color: #020508; /* iOS 藍色 */
    font-weight: bold;
 }
 
 .text-card h4 a:hover {
-   color: #10171f;
+   color: #121a23;
 }
 
 a.text-decoration-none {
@@ -44,7 +44,7 @@ a.text-decoration-none {
 }
 
 a.text-decoration-none:hover h4 {
-   color: #0f1821; /* 滑鼠懸停效果 */
+   color: #070c10; /* 滑鼠懸停效果 */
 }
 
 /* 底部導航樣式 */
@@ -64,13 +64,13 @@ a.text-decoration-none:hover h4 {
 
 .home-link {
    display: block;
-   color: #111920;
+   color: #030405;
    text-decoration: none;
    padding: 10px 0;
 }
 
 .home-link:hover {
-   color: #0f1821; /* 滑鼠懸停顏色 */
+   color: #040608; /* 滑鼠懸停顏色 */
 }
 /* 留言區塊容器樣式 */
 .message1 {
